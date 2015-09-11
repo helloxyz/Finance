@@ -1,0 +1,18 @@
+<div class="hero-unit">
+  <h2 class="name"><%= fund.name %></h2>
+  <%- linkTo('Edit this fund', editFundPath(params.id), {class: 'btn pull-right'}); %>
+  <%- linkTo('Back to list', fundPath(''), {class: 'btn pull-right'}); %>
+</div>
+
+<h2>Fund Properties</h2>
+<% for(var i in fund) { -%>
+<% if(i !== 'saved') { -%>
+<div class="row list-item">
+  <div class="span4">
+    <h3><%= i %></h3>
+  </div>
+  <div class="span8">
+    <h3><i class="icon-list-alt"></i><span class="<%= i %>"><%= fund[i] %></span></h3>
+  </div>
+</div>
+<% } -%><% } -%>

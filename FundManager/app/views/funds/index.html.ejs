@@ -1,0 +1,28 @@
+<div class="hero-unit">
+  <h2>All Funds</h2>
+  <%- linkTo('Create a new Fund', addFundPath, {class: 'btn pull-right'}); %>
+</div>
+
+<div id="funds-list">
+<% if (funds && funds.length > 0) { %>
+<table>
+  <tbody>
+	  <th>
+		  <td>日期</td>
+			<td>净值</td>
+			<td>份额</td>
+			<td>资金变动</td>
+		</th>
+		<% for (var i = 0, ii = funds.length; i < ii; i++) { %>
+		  <tr>
+			  <td>funds[i].date</td>
+			  <td>funds[i].net</td>
+			  <td>funds[i].qty</td>
+			  <td>funds[i].increment</td>
+			</tr>
+    <% } %>
+	</tbody>
+</table>
+
+<% } %>
+</div>

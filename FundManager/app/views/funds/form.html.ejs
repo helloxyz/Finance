@@ -1,0 +1,12 @@
+	<div class="control-group">
+					<label for="date" class="control-label">总资产</label>
+					<div class="controls">
+						<%- contentTag('input', fund.assets, {type:'number', class:'span3', name:'assets'}) %>
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="price" class="control-label">申购(+)/赎回(-)</label>
+					<div class="controls">
+						<%- contentTag('input', fund.increment, {type:'number', class:'span3', name:'increment'}) %>
+					</div>
+				</div>
